@@ -41,3 +41,22 @@ ggplot(data = starwars, aes(x = height)) +
 ggplot(data = starwars, aes(x = height, y = mass)) +
   geom_point()
 ```
+
+## Calculate summary statistics
+
+-   Use mean() function to find means.
+
+-   Use sd() function to find standard deviations
+
+```{r}
+mean_height <- mean(starwars$height, na.rm = TRUE)
+mean_height
+
+# ?mean will show you how to drop NAs
+```
+
+```{r}
+# summary of star wars' height
+summary(starwars$height)
+class(starwars$height)
+```
